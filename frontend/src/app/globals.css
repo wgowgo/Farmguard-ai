@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply text-ink font-sans text-[15px] leading-relaxed;
+    background-color: #f4f5f7;
+    min-height: 100vh;
+  }
+
+  a {
+    @apply text-portal-link hover:underline;
+  }
+
+  ::selection {
+    @apply bg-rda-100 text-rda-900;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply min-h-screen flex flex-col;
+  }
+
+  .page-main {
+    @apply flex-1 w-full max-w-portal mx-auto px-4 md:px-6 py-8 md:py-12;
+  }
+
+  /* 페이지 상단 타이틀 영역 (농사로 스타일) */
+  .page-header {
+    @apply bg-white border border-border rounded-portal mb-6 overflow-hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .page-breadcrumb {
+    @apply flex items-center gap-1.5 px-5 py-2.5 text-xs text-ink-muted bg-surface-muted border-b border-border-light;
+  }
+
+  .page-breadcrumb a {
+    @apply text-ink-muted no-underline hover:text-rda-600;
+  }
+
+  .page-header-body {
+    @apply px-5 py-5 md:px-6 md:py-6 flex flex-wrap items-end justify-between gap-4;
+  }
+
+  .page-title {
+    @apply text-xl md:text-2xl font-bold text-ink tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .page-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.1em;
+    background: #007a3d;
+    margin-right: 10px;
+    vertical-align: -0.15em;
+    border-radius: 2px;
+  }
+
+  .page-desc {
+    @apply text-sm text-ink-secondary mt-2 pl-[14px];
+  }
+
+  /* 카드 — 흰 배경 + 얇은 테두리 */
+  .card {
+    @apply bg-white border border-border rounded-portal p-5 md:p-6;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .card-flat {
+    @apply bg-surface-muted border border-border-light rounded-portal p-5;
+  }
+
+  .card-title {
+    @apply text-base font-bold text-ink pb-3 mb-4 border-b-2 border-rda-600;
+  }
+
+  /* 버튼 */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 text-white px-5 py-2.5 rounded-portal text-sm font-semibold
+      bg-rda-600 hover:bg-rda-700 border border-rda-700
+      active:bg-rda-800 transition-colors duration-150;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-ink border border-border px-5 py-2.5 rounded-portal text-sm font-medium
+      hover:border-rda-400 hover:text-rda-700 hover:bg-rda-50
+      transition-colors duration-150;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center text-sm font-medium text-ink-secondary hover:text-rda-700 no-underline transition-colors;
+  }
+
+  /* 필터, 탭 칩 */
+  .chip {
+    @apply px-4 py-2 rounded-portal text-sm border border-border bg-white text-ink-secondary
+      hover:border-rda-400 hover:text-rda-700 transition-colors;
+  }
+
+  .chip-active {
+    @apply px-4 py-2 rounded-portal text-sm bg-rda-600 text-white border border-rda-700 font-semibold;
+  }
+
+  /* 섹션 라벨 — 좌측 그린 바 */
+  .section-label {
+    @apply text-sm font-bold text-ink mb-3 pl-3 border-l-4 border-rda-600;
+  }
+
+  /* 위험도 배지 */
+  .risk-badge-low {
+    @apply bg-rda-50 text-rda-800 border border-rda-200;
+  }
+
+  .risk-badge-caution {
+    @apply bg-amber-50 text-amber-900 border border-amber-200;
+  }
+
+  .risk-badge-danger {
+    @apply bg-orange-50 text-orange-900 border border-orange-200;
+  }
+
+  .risk-badge-critical {
+    @apply bg-red-50 text-red-900 border border-red-200;
+  }
+
+  .risk-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded text-xs font-bold;
+  }
+
+  .stat-value {
+    @apply text-2xl md:text-3xl font-bold tracking-tight text-ink tabular-nums;
+  }
+
+  .stat-label {
+    @apply text-xs text-ink-muted mt-1;
+  }
+
+  /* 포털 탭 (하단 보더) */
+  .portal-tabs {
+    @apply flex gap-0 border-b border-border bg-white rounded-t-portal overflow-x-auto;
+  }
+
+  .portal-tab {
+    @apply px-5 py-3 text-sm text-ink-secondary whitespace-nowrap border-b-2 border-transparent -mb-px
+      hover:text-rda-700 hover:border-rda-200 transition-colors no-underline;
+  }
+
+  .portal-tab-active {
+    @apply px-5 py-3 text-sm font-bold text-rda-700 whitespace-nowrap border-b-2 border-rda-600 -mb-px bg-white no-underline;
+  }
+
+  /* 네비 (Nav 컴포넌트용) */
+  .nav-link {
+    @apply block px-4 py-3.5 text-[15px] text-white/90 hover:text-white hover:bg-rda-800 transition-colors no-underline whitespace-nowrap;
+  }
+
+  .nav-link-active {
+    @apply block px-4 py-3.5 text-[15px] font-bold text-white bg-rda-800 no-underline whitespace-nowrap;
+  }
+
+  .input-field {
+    @apply w-full border border-border rounded-portal px-3 py-2.5 text-sm bg-white text-ink
+      focus:outline-none focus:ring-2 focus:ring-rda-200 focus:border-rda-500 transition-shadow;
+  }
+
+  .table-head {
+    @apply text-left text-xs font-bold text-ink bg-surface-muted border-y border-border px-3 py-2.5;
+  }
+
+  .table-cell {
+    @apply py-3 px-3 text-sm text-ink border-b border-border-light;
+  }
+
+  .alert-banner {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-portal text-xs font-bold
+      bg-red-600 text-white;
+  }
+
+  .info-banner {
+    @apply px-4 py-3 rounded-portal bg-rda-50 border border-rda-200 text-sm text-ink-secondary;
+  }
+
+  .spinner {
+    @apply w-8 h-8 border-[3px] border-rda-100 border-t-rda-600 rounded-full animate-spin;
+  }
+
+  /* 빈 상태 */
+  .alert-item {
+    transition: box-shadow 0.15s ease;
+  }
+
+  .alert-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .empty-state {
+    @apply card text-center py-16;
+  }
+
+  /* 홈 랜딩 */
+  .home-wrap {
+    @apply space-y-16 md:space-y-24 pb-12 md:pb-16;
+  }
+
+  .home-section {
+    @apply py-2 md:py-4;
+  }
+
+  .home-section-title {
+    @apply text-xl md:text-2xl font-bold text-ink mb-3 pl-4 border-l-4 border-rda-600;
+  }
+
+  .home-section-desc {
+    @apply text-sm md:text-base text-ink-secondary mb-8 md:mb-12 pl-5 max-w-3xl leading-relaxed;
+  }
+
+  .home-card {
+    @apply bg-white border border-border rounded-portal overflow-hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .home-card-body {
+    @apply p-6 md:p-8;
+  }
+
+  .home-img {
+    @apply w-full object-cover;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "frcDsstrPrevnt": [
+    "frcDsstrPrevntYear"
+  ],
+  "pesticideRegStatus": [
+    "useGubunList"
+  ],
+  "agchmSafeManual": [
+    "agchmSafeManualList",
+    "nationList"
+  ],
+  "openApiData": [
+    "openApiDataList"
+  ],
+  "relatedSite": [
+    "relatedSiteList"
+  ]
+}
+frc_ok=[]

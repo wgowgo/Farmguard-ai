@@ -1,0 +1,104 @@
+[
+  {
+    "svc": "frcDsstrPrevnt",
+    "op": "frcDsstrPrevntYear",
+    "code": "00",
+    "items": 16,
+    "params": {}
+  },
+  {
+    "svc": "frcDsstrPrevnt",
+    "op": "frcDsstrPrevntYear",
+    "code": "00",
+    "items": 16,
+    "params": {
+      "sYear": "2026"
+    }
+  },
+  {
+    "svc": "pesticideRegStatus",
+    "op": "pesticideRegStatusList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1
+    }
+  },
+  {
+    "svc": "pesticideRegStatus",
+    "op": "pesticideRegStatusList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1,
+      "sCropNm": "고추"
+    }
+  },
+  {
+    "svc": "pesticideRegStatus",
+    "op": "pesticideRegStatusList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1,
+      "cropName": "고추",
+      "diseaseWeedName": "탄저병"
+    }
+  },
+  {
+    "svc": "agchmSafeManual",
+    "op": "agchmSafeManualList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1,
+      "sCropNm": "고추"
+    }
+  },
+  {
+    "svc": "agchmQltinsp",
+    "op": "agchmQltinspLst",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1
+    }
+  },
+  {
+    "svc": "healthEduGymMovInfo",
+    "op": "healthEduGymMovInfoSafetyEdu",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1
+    }
+  },
+  {
+    "svc": "openApiData",
+    "op": "openApiDataList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1
+    }
+  },
+  {
+    "svc": "relatedSite",
+    "op": "relatedSiteList",
+    "code": "00",
+    "items": 4,
+    "params": {
+      "pageNo": 1
+    }
+  },
+  {
+    "svc": "dbyhsCccrrncInfo",
+    "op": "dbyhsCccrrncInfoList",
+    "code": "00",
+    "items": 10,
+    "params": {
+      "pageNo": 1,
+      "sText": "고추"
+    }
+  }
+]
