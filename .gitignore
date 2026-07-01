@@ -9,3 +9,8 @@ frontend/out/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Local docs (not for public repo)
+공모아이템요약.txt
+*.md
+!README.md
