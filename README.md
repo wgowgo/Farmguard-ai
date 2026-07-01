@@ -110,20 +110,6 @@ farmguard-ai/
 └── frontend/              # Next.js 14
 ```
 
-## MVP scope
-
-- **Crops:** 12 types (pepper, tomato, strawberry, rice, cucumber, eggplant, apple, grape, garlic, onion, soybean, corn) — 2–3 key pests each
-- **Reference pests (pepper):** anthracnose, phytophthora blight, tobacco cutworm
-
-## Deployment
-
-1. **Backend (Render):** Connect the repo, use `render.yaml`, set secrets in the dashboard (`PUBLIC_DATA_SERVICE_KEY`, `NONGSARO_API_KEY`, `DEMO_MODE=false`).
-2. **Frontend (Netlify):** Set build base to `frontend`, add `NEXT_PUBLIC_API_URL=https://your-api.onrender.com`.
-
-## License & compliance
-
-Display data source attribution and comply with each public API's terms of use (data.go.kr, Nongsaro, RDA, KMA, etc.).
-
 ---
 
 # 팜가드 AI (FarmGuard AI)
@@ -237,17 +223,3 @@ farmguard-ai/
 │   └── scripts/test_apis.py
 └── frontend/              # Next.js 14
 ```
-
-## MVP 범위
-
-- **작물:** 12종 (고추, 토마토, 딸기, 벼, 오이, 가지, 사과, 포도, 마늘, 양파, 콩, 옥수수) — 작물별 병해충 2~3종
-- **참고 병해충 (고추):** 탄저병, 역병, 담배나방
-
-## 배포
-
-1. **백엔드 (Render):** 저장소 연결 후 `render.yaml` 사용, 대시보드에서 시크릿 설정 (`PUBLIC_DATA_SERVICE_KEY`, `NONGSARO_API_KEY`, `DEMO_MODE=false`).
-2. **프론트엔드 (Netlify):** 빌드 base `frontend`, `NEXT_PUBLIC_API_URL=https://your-api.onrender.com` 설정.
-
-## 라이선스 및 준수 사항
-
-공공데이터 출처 표시 및 각 API 이용허락범위(data.go.kr, 농사로, 농촌진흥청, 기상청 등)를 준수하세요.
